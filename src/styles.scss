@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    color:gray;
+}
+h1{
+    color:#2196F3;
+    font-size: 2rem;
+}
+
+.no-padding{
+    padding:0px;
+    margin:0px;
+}
+
+.btn-right{
+    margin-top:5px;
+    margin-right: 5px;
+    float:right;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

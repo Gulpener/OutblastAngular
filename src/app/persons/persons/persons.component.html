@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 no-padding">
+        <button class="btn btn-primary btn-right" (click)="onAdd()"><i class="fas fa-user-plus"></i> Add</button>
+        <h1>Personen</h1>
+
+        <div *ngFor="let person of Persons">
+           <span 
+            [class.selected]="person === selectedPerson"
+            (click)="onSelect(person)">{{person.name}}</span>
+        </div>
+    </div>
+    <div class="col-sm" *ngIf="selectedPerson">
+      <app-person-detail         
+        [person]="selectedPerson"
+        (deleted)="onDeleted($event)"
+        ></app-person-detail>
+    </div>
+</div>
+
+

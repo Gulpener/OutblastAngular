@@ -1,0 +1,29 @@
+nav{
+    background:#2196F3;//
+    height: 100vh;
+}
+
+nav > h1{
+    color:white;
+    font-size: 20px;
+    padding: 20px 20px 0px 20px;
+}
+
+nav > ul{
+    margin: 20px;
+    padding: 0;
+}
+
+nav > ul > li {
+    color: rgba(255,255,255,0.75);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li > a{
+    color: rgba(255,255,255,0.75);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

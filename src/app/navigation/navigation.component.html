@@ -1,0 +1,10 @@
+<nav>
+    <h1>Outblast</h1>
+    <ul>
+        <li *ngFor="let menuItem of MenuItems">
+            <a routerLink="{{menuItem.route}}">{{menuItem.name}}</a>
+        </li>    
+    </ul>
+</nav>
+
+

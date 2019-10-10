@@ -1,0 +1,22 @@
+<form [formGroup]="addPersonForm" (ngSubmit)="onSubmit(addPersonForm.value)">
+    <h1 mat-dialog-title>Persoon toevoegen</h1>
+    <div mat-dialog-content>
+    <div class="form-group">
+            <label for="name">
+              Name
+            </label>
+            <input id="name" type="text" class="form-control" formControlName="name">
+          </div>
+        
+          <div class="form-group">
+            <label for="instrument">
+              Instrument
+            </label>
+            <input id="instrument" type="text" class="form-control" formControlName="instrument">
+          </div>
+    </div>
+    <div mat-dialog-actions>
+    <button mat-button class="btn btn-primary btn-right" type="submit">Ok</button>
+    <button mat-button class="btn btn-primary btn-right" (click)="onCancel()">Cancel</button>  
+    </div>
+</form>
