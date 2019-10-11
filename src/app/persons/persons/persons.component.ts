@@ -23,12 +23,12 @@ export class PersonsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect(person:any)
+  onSelect(person:Person)
   {
     this.selectedPerson = person;
   }
 
-  onDeleted(person:any)
+  onDeleted(person:Person)
   {
     this.externalInfo.RemovePerson(person)
 
@@ -43,6 +43,12 @@ export class PersonsComponent implements OnInit {
         this.selectedPerson = null;
       }
     }
+  }
+
+  onUpdated(person:Person)
+  {
+    this.externalInfo.UpdatePerson(person);
+    this.selectedPerson = person;
   }
 
   onAdd()

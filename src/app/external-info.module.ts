@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 export class ExternalInfoModule
 {
   
+  
     private Persons: Person[] = [
         { id: 1, name: 'Gertjan Gielen', instrument: "Trombone" },
         { id: 2, name: 'Sophie de Gouw', instrument: "Euphonium" },
@@ -17,5 +18,10 @@ export class ExternalInfoModule
 
       public RemovePerson(person: Person) {
         this.Persons = this.Persons.filter(pers => pers.id != person.id);
+      }
+
+      UpdatePerson(person: Person) {
+        this.Persons = this.Persons.filter(pers => pers.id != person.id);
+        this.Persons.push(person);
       }
 }

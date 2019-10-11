@@ -9,15 +9,13 @@ import { Person } from '../person.model';
 })
 export class PersonAddDialogComponent implements OnInit {
   addPersonForm;
+  id: number;
   constructor(
     public dialogRef: MatDialogRef<PersonAddDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public person: Person,
     private formBuilder: FormBuilder) {
-
-      this.addPersonForm = this.formBuilder.group({
-        name: '',
-        instrument: ''
-      });
+      this.id = person.id;
+      this.addPersonForm = this.formBuilder.group(person);
     }
 
   ngOnInit() {
@@ -30,6 +28,7 @@ export class PersonAddDialogComponent implements OnInit {
 
   onSubmit(person: Person)
   {
+    person.id = this.id;
     this.dialogRef.close(person);
   }
 }
